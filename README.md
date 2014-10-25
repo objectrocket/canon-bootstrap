@@ -1,4 +1,4 @@
-bootstrap-canon
+canon-bootstrap
 ===============
 
-Canon Skin for Bootstrap
+Canon Skins for Twitter Bootstrap

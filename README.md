@@ -1,4 +1,4 @@
-canon-bootstrap
-===============
+# canon-bootstrap
 
-Canon Skins for Twitter Bootstrap
+Canon Bootstrap is a set of themes for Twitter Bootstrap based on the Canon 
+visual design. 

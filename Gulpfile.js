@@ -19,7 +19,6 @@ gulp.task('documentation', ['build'], function (done) {
   var join = require('path').join;
   var async = require('async');
   var metalsmith = require('metalsmith');
-  var copy = require('metalsmith-copy');
   var markdown = require('metalsmith-markdown');
   var templates = require('metalsmith-templates');
 

@@ -6,105 +6,36 @@ template: layout.html
 
 <div class="row documentation-row">
   <div class="col-sm-12">
-    <h3>Buttons</h3>
-  </div>
-</div>
-
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-default">Default Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-default hover">Default Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-default active">Default Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-default disabled">Default Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-primary">Primary Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-primary hover">Primary Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-primary active">Primary Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-primary disabled">Primary Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-success">Success Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-success hover">Success Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-success active">Success Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-success disabled">Success Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-info">Info Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-info hover">Info Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-info active">Info Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-info disabled">Info Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-warning">Warning Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-warning hover">Warning Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-warning active">Warning Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-warning disabled">Warning Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-danger">Danger Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-danger hover">Danger Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-danger active">Danger Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-danger disabled">Danger Button</a>
-  </div>
-</div>
-<div class="row documentation-row">
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-link">Link Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-link hover">Link Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-link active">Link Button</a>
-  </div>
-  <div class="col-sm-3">
-    <a href="#" class="btn btn-block btn-link disabled">Link Button</a>
+    <h1>Typography</h1>
+    <div class="documentation-example">
+      <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+      <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+      <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+      <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+      <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ol>
+      <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+      <ul class="list-unstyled">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+      <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+      <ul class="list-inline">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </div>
   </div>
 </div>

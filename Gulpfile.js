@@ -48,7 +48,7 @@ gulp.task('documentation', ['build'], function (done) {
 gulp.task('server', ['documentation'], function () {
   var webserver = require('gulp-webserver');
 
-  gulp.watch(['sass/**/*.scss', 'docs/**/*.{html,md}'], ['documentation']);
+  gulp.watch(['sass/**/*.scss', 'docs/src/**/*.{html,md}'], ['documentation']);
 
   return gulp.src('docs/build')
     .pipe(webserver({ livereload: true }));

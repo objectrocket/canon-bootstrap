@@ -31,7 +31,7 @@ gulp.task('documentation', ['build'], function (done) {
     },
     canon: function (done) {
       gulp.src('build/**/*')
-        .pipe(gulp.dest('docs/build/canon'))
+        .pipe(gulp.dest('docs/build'))
         .on('end', done);
     }
   }, done);
@@ -40,7 +40,7 @@ gulp.task('documentation', ['build'], function (done) {
 gulp.task('server', ['documentation'], function () {
   var webserver = require('gulp-webserver');
 
-  gulp.watch(['sass/**/*.scss', 'docs/{src,templates}/**/*.{html,md}'], ['documentation']);
+  gulp.watch(['sass/**/*.scss', 'docs/!(build)/**/*.*'], ['documentation']);
 
   return gulp.src('docs/build')
     .pipe(webserver({ livereload: true }));

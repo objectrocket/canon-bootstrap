@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+
+  src: url('#{$header-font-path}#{$header-font-name}.eot');
+  src: url('#{$header-font-path}#{$header-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('#{$header-font-path}#{$header-font-name}.woff') format('woff'),
+       url('#{$header-font-path}#{$header-font-name}.ttf') format('truetype'),
+       url('#{$header-font-path}#{$header-font-name}.svg##{$header-font-svg-id}') format('svg');
+}

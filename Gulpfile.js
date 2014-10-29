@@ -1,8 +1,11 @@
+var async = require('async');
 var gulp = require('gulp');
 
 gulp.task('default', ['build', 'documentation']);
 
-gulp.task('build', function () {
+gulp.task('build', ['build:sass', 'build:fonts']);
+
+gulp.task('build:sass', function () {
   var autoprefixer = require('gulp-autoprefixer');
   var sass = require('gulp-sass');
   var sourcemaps = require('gulp-sourcemaps');
@@ -12,12 +15,26 @@ gulp.task('build', function () {
       .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
       .pipe(sass({ includePaths: ['node_modules/bootstrap-sass/assets/stylesheets'] }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('build:fonts', function (done) {
+  async.series({
+    canon: function (done) {
+      gulp.src('fonts/**/*')
+        .pipe(gulp.dest('build/fonts'))
+        .on('end', done);
+    },
+    bootstrap: function (done) {
+      gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*')
+        .pipe(gulp.dest('build/fonts'))
+        .on('end', done);
+    }
+  }, done);
 });
 
 gulp.task('documentation', ['build'], function (done) {
   var join = require('path').join;
-  var async = require('async');
   var metalsmith = require('metalsmith');
   var markdown = require('metalsmith-markdown');
   var templates = require('metalsmith-templates');

@@ -3,7 +3,7 @@ var gulp = require('gulp');
 
 gulp.task('default', ['build', 'documentation']);
 
-gulp.task('build', ['build:sass', 'build:fonts'])
+gulp.task('build', ['build:sass', 'build:fonts']);
 
 gulp.task('build:sass', function () {
   var autoprefixer = require('gulp-autoprefixer');
@@ -18,9 +18,19 @@ gulp.task('build:sass', function () {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('build:fonts', function () {
-  return gulp.src('fonts/**/*')
-    .pipe(gulp.dest('build/fonts'));
+gulp.task('build:fonts', function (done) {
+  async.series({
+    canon: function (done) {
+      gulp.src('fonts/**/*')
+        .pipe(gulp.dest('build/fonts'))
+        .on('end', done);
+    },
+    bootstrap: function (done) {
+      gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*')
+        .pipe(gulp.dest('build/fonts'))
+        .on('end', done);
+    }
+  }, done);
 });
 
 gulp.task('documentation', ['build'], function (done) {

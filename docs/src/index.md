@@ -6,7 +6,7 @@ template: layout.html
 
 <div class="row documentation-row">
   <div class="col-sm-12">
-    <h1>Typography</h1>
+    <h1>Typography <span class="glyphicon glyphicon-search"></span></h1>
     <div class="documentation-example">
       <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
       <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>

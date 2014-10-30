@@ -1,20 +1,9 @@
 var async = require('async');
 var gulp = require('gulp');
-var clean = require('gulp-clean');
 
 gulp.task('default', ['build', 'documentation']);
 
-gulp.task('build', ['clean', 'build:sass', 'build:fonts', 'build:assets']);
-
-gulp.task('clean', function(){
-  return gulp.src('docs/build/', {read: false})
-  .pipe(clean());
-});
-
-gulp.task('build:assets', function(){
-  return gulp.src('docs/assets/**/*')
-  .pipe(gulp.dest('build/assets/'));
-});
+gulp.task('build', ['build:sass', 'build:fonts']);
 
 gulp.task('build:sass', function () {
   var autoprefixer = require('gulp-autoprefixer');
@@ -61,6 +50,11 @@ gulp.task('documentation', ['build'], function (done) {
       gulp.src('build/**/*')
         .pipe(gulp.dest('docs/build'))
         .on('end', done);
+    },
+    assets:function(done) {
+      gulp.src('docs/assets/**/*')
+      .pipe(gulp.dest('docs/build/assets'))
+      .on('end', done);
     }
   }, done);
 });

@@ -1,19 +1,35 @@
 var async = require('async');
 var gulp = require('gulp');
+var util = require('gulp-util');
+var task = process.argv[2];
+
+function error(e) {
+  util.log(e.toString());
+  this.emit('end');
+
+  if (task !== 'server') {
+    process.exit(1);
+  }
+}
 
 gulp.task('default', ['build', 'documentation']);
 
-gulp.task('build', ['build:sass', 'build:fonts']);
+gulp.task('clean', function (done) {
+  var del = require('del');
 
-gulp.task('build:sass', function () {
-  var autoprefixer = require('gulp-autoprefixer');
-  var sass = require('gulp-sass');
+  del(['build', 'docs/build'], done);
+});
+
+gulp.task('build', ['build:less', 'build:fonts']);
+
+gulp.task('build:less', function () {
+  var less = require('gulp-less');
   var sourcemaps = require('gulp-sourcemaps');
 
-  return gulp.src('sass/canon-bootstrap.scss')
+  return gulp.src('less/canon-bootstrap.less')
     .pipe(sourcemaps.init())
-      .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-      .pipe(sass({ includePaths: ['node_modules/bootstrap-sass/assets/stylesheets'] }))
+    .pipe(less({ paths: ['node_modules/bootstrap/less'] }))
+      .on('error', error)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'));
 });
@@ -26,7 +42,7 @@ gulp.task('build:fonts', function (done) {
         .on('end', done);
     },
     bootstrap: function (done) {
-      gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*')
+      gulp.src('node_modules/bootstrap/fonts/**/*')
         .pipe(gulp.dest('build/fonts'))
         .on('end', done);
     }
@@ -51,10 +67,10 @@ gulp.task('documentation', ['build'], function (done) {
         .pipe(gulp.dest('docs/build'))
         .on('end', done);
     },
-    assets:function(done) {
+    assets: function(done) {
       gulp.src('docs/assets/**/*')
-      .pipe(gulp.dest('docs/build/assets'))
-      .on('end', done);
+        .pipe(gulp.dest('docs/build/assets'))
+        .on('end', done);
     }
   }, done);
 });
@@ -62,7 +78,7 @@ gulp.task('documentation', ['build'], function (done) {
 gulp.task('server', ['documentation'], function () {
   var webserver = require('gulp-webserver');
 
-  gulp.watch(['sass/**/*.scss', 'docs/!(build)/**/*.*'], ['documentation']);
+  gulp.watch(['less/**/*.less', 'docs/!(build)/**/*.*'], ['build', 'documentation']);
 
   return gulp.src('docs/build')
     .pipe(webserver({ livereload: true }));

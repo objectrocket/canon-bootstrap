@@ -3,6 +3,12 @@ var gulp = require('gulp');
 
 gulp.task('default', ['build', 'documentation']);
 
+gulp.task('clean', function (done) {
+  var del = require('del');
+
+  del(['build', 'docs/build'], done);
+});
+
 gulp.task('build', ['build:sass', 'build:fonts']);
 
 gulp.task('build:sass', function () {

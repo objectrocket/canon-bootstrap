@@ -6,7 +6,6 @@ template: layout.html
 
 <div class="navbar navbar-default navbar-static-top">
   <div class="container-fluid">
-
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/signup">Sign up</a></li>
@@ -20,72 +19,68 @@ template: layout.html
 </div>
 
 
-<div class="container">
-  <div class="navbar navbar-primary navbar-static-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; width:164px;"></a>
-      </div>
-      <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+<div class="navbar navbar-primary navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; width:164px;"></a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 
-        <ul class="nav navbar-nav">
-          <li ng-repeat="item in menu" class="active">
-            <a ng-href="">Servers</a>
-          </li>
-          <li><a href="">Load Balancers</a></li>
-          <li><a href="">Dedicated</a></li>
-          <li><a href="">Managed</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" class="active">
+          <a ng-href="">Servers</a>
+        </li>
+        <li><a href="">Load Balancers</a></li>
+        <li><a href="">Dedicated</a></li>
+        <li><a href="">Managed</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
 
-        </div>
     </div>
   </div>
-
-
-
-  <div class="navbar navbar-secondary navbar-static-top">
-    <div class="container-fluid">
-      <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-
-        <ul class="nav navbar-nav">
-          <li ng-repeat="item in menu" class="active">
-            <a ng-href="{{item.link}}">submenu 1</a>
-          </li>
-          <li ng-repeat="item in menu">
-            <a ng-href="{{item.link}}">submenu 2</a>
-          </li>
-          <li ng-repeat="item in menu">
-            <a ng-href="{{item.link}}">submenu 3</a>
-          </li>
-          <li ng-repeat="item in menu">
-            <a ng-href="{{item.link}}">submenu 4</a>
-          </li>
-        </ul>
-
-
-      </div>
-    </div>
-  </div>
-
 </div>
+
+<div class="navbar navbar-secondary navbar-static-top">
+  <div class="container-fluid">
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" class="active">
+          <a ng-href="{{item.link}}">submenu 1</a>
+        </li>
+        <li ng-repeat="item in menu">
+          <a ng-href="{{item.link}}">submenu 2</a>
+        </li>
+        <li ng-repeat="item in menu">
+          <a ng-href="{{item.link}}">submenu 3</a>
+        </li>
+        <li ng-repeat="item in menu">
+          <a ng-href="{{item.link}}">submenu 4</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
 
 <div class="row documentation-row">
   <div class="col-sm-12">
@@ -119,6 +114,27 @@ template: layout.html
         <li>Two</li>
         <li>Three</li>
       </ul>
+
+      <!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
     </div>
   </div>
 </div>

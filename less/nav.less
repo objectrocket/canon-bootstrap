@@ -12,13 +12,13 @@
   .navbar-brand {
     padding: @navbar-padding-vertical @navbar-padding-horizontal;
     font-size: @navbar-font-size;
-    height: @navbar-height;
   }
 
   .navbar-nav {
     > li {
-      margin-top: ((@navbar-height - @line-height-computed) / 2);
-      margin-bottom: ((@navbar-height - @line-height-computed) / 2);
+      // HACK: Added 2px manual adjustment while building demo.
+      margin-top: ((@navbar-height - @line-height-computed) / 2 - 2);
+      margin-bottom: ((@navbar-height - @line-height-computed) / 2 - 2);
     }
 
     > li > a {

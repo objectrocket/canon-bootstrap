@@ -32,5 +32,26 @@
   <div class="container clearfix">
     {{{ contents }}}
   </div>
+
+
+  <script src="/assets/jquery-1.11.1.min.js"></script>
+  <script src="/assets/bootstrap.min.js"></script>
+
+
+<script>
+
+
+ $('*[data-toggle="tooltip"]').tooltip({
+    container:"body"
+  });
+
+var popoverContent = $('#popover-content').html();
+
+$('*[data-toggle="popover"]').popover({
+    container:"body",
+    content:popoverContent,
+    html:true
+  });
+</script>
 </body>
 </html>

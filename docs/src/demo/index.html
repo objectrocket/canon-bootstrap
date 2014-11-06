@@ -191,17 +191,30 @@ template: demo.html
   </div>
   <div class="col-md-9">
 
-
-
-
-
     <div class="rs-main rs-panel">
       <h2 class="page-header">Cloud Servers</h2>
       <div class="rs-content">
-        <a href="create.html" class="btn btn-primary">Create Server</a>
-        <button class="btn btn-default btn-disabled modify-selected" disabled="">Delete</button>
 
+        <div class="clearfix">
+          <a href="create.html" class="btn btn-primary">Create Server</a>
+          <button class="btn btn-default btn-disabled modify-selected" disabled="">Delete</button>
 
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-gear"></i> Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation" class="dropdown-header">Manage</li>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="presentation" class="dropdown-header">Monitor</li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
 
         <table class="table table-striped">
           <thead>
@@ -221,16 +234,11 @@ template: demo.html
           </thead>
           <tbody>
             <tr id="row-">
-              <td class="test rs-table-status rs-table-status-ok tip" data-delay="1" id="row-status-" data-title="">
-
-                <!--
-                <div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>
-              -->
-
+            <td class="test rs-table-status rs-table-status-ok" data-toggle="tooltip" data-placement="left" title="Active: Item is working correctly.">
             </td>
             <td class="rs-table-checkbox"><input type="checkbox"></td>
             <td class="rs-table-cog">
-              <span class="fa fa-gear"></span>
+              <span class="fa fa-gear" data-toggle="popover" title="Example Popover"></span>
               <div class="rs-dropdown">
                 <div class="rs-cog rs-dropdown-toggle"></div>
                 <ul class="rs-dropdown-menu hidden">
@@ -250,16 +258,12 @@ template: demo.html
             </td>
           </tr>
           <tr id="row-">
-            <td class="test rs-table-status rs-table-status-warning tip" data-delay="1" id="row-status-" data-title="">
-
-                <!--
-                <div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>
-              -->
+            <td class="test rs-table-status rs-table-status-warning"  data-toggle="tooltip" data-placement="left" title="Warning: Something's not right">
 
             </td>
             <td class="rs-table-checkbox"><input type="checkbox"></td>
             <td class="rs-table-cog">
-              <span class="fa fa-gear"></span>
+              <span class="fa fa-gear" data-toggle="popover" title="Example Popover"></span>
               <div class="rs-dropdown">
                 <div class="rs-cog rs-dropdown-toggle"></div>
                 <ul class="rs-dropdown-menu hidden">
@@ -280,7 +284,7 @@ template: demo.html
           </tr>
 
           <tr id="row-">
-            <td class="test rs-table-status rs-table-status-error tip" data-delay="1" id="row-status-" data-title="">
+            <td class="test rs-table-status rs-table-status-error" data-toggle="tooltip" data-placement="left" title="OMG: Not. Good.">
 
                 <!--
                 <div class='title rs-no-wrap rs-status-ok'><strong>Active</strong></div><div class='rs-quiet'>Use When: Item is working correctly.</div>
@@ -289,7 +293,7 @@ template: demo.html
             </td>
             <td class="rs-table-checkbox"><input type="checkbox"></td>
             <td class="rs-table-cog">
-              <span class="fa fa-gear"></span>
+              <span class="fa fa-gear" data-toggle="popover" title="Example Popover"></span>
               <div class="rs-dropdown">
                 <div class="rs-cog rs-dropdown-toggle"></div>
                 <ul class="rs-dropdown-menu hidden">
@@ -315,10 +319,42 @@ template: demo.html
 
   </div>
 
+<div id="popover-content" style="display:none;">
 
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+</form>
 
-
+</div>
 
 
 </div>
+
 </div>
+
+

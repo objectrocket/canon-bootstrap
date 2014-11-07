@@ -71,11 +71,39 @@ template: detail.html
   <div class="col-md-9">
 
     <div class="rs-main rs-panel">
-      <section>
+
+      <!-- Breadcrumb section -->
+      <ol class="breadcrumb">
+        <li class="pull-right" style="position:relative;">
+          <span data-toggle="dropdown">
+            <i class="fa fa-gear"></i>
+            Actions
+            <i class="caret"></i>
+          </span>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation" class="dropdown-header">Manage</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="presentation" class="dropdown-header">Monitor</li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Cloud Servers</a></li>
+        <li class="active">My Cloud Server</li>
+      </ol>
+
+
+
+      <!-- Hidden main page header section directly from canon -->
+      <section class="hidden">
 
         <div class="page-header">
           <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-gear"></i> Action <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -90,13 +118,31 @@ template: detail.html
             </ul>
           </div>
 
-          <h2>My Cloud Server</h2>
+          <h2>My Cloud Server <small>Cloud Server</small></h2>
         </div>
 
       </section>
 
       <header>
-        <h3>Server Details</h3>
+
+        <!-- Hidden Example button group on heading -->
+        <div class="btn-group pull-right hidden">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-gear"></i> Action <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation" class="dropdown-header">Manage</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="presentation" class="dropdown-header">Monitor</li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+
+        <h2>My Cloud Server</h2>
       </header>
       <section class="rs-content">
 

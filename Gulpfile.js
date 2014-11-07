@@ -28,7 +28,10 @@ gulp.task('build:less', function () {
 
   return gulp.src('less/canon-bootstrap.less')
     .pipe(sourcemaps.init())
-    .pipe(less({ paths: ['node_modules/bootstrap/less'] }))
+    .pipe(less({ paths: [
+      'node_modules/bootstrap/less',
+      'node_modules/font-awesome/less'
+      ] }))
       .on('error', error)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'));
@@ -45,7 +48,13 @@ gulp.task('build:fonts', function (done) {
       gulp.src('node_modules/bootstrap/fonts/**/*')
         .pipe(gulp.dest('build/fonts'))
         .on('end', done);
+    },
+    fontawesome:function(done){
+      gulp.src('node_modules/font-awesome/fonts/**/*')
+      .pipe(gulp.dest('build/fonts'))
+      .on('end',done);
     }
+
   }, done);
 });
 

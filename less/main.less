@@ -29,7 +29,10 @@ body {
   }
 
   >header {
-    padding:0 @padding-base-horizontal*2;
+    padding:@padding-base-vertical*4 @padding-base-horizontal*2;
+    h1,h2,h3,h4 {
+      margin:0;
+    }
   }
 
   >.alert {
@@ -65,8 +68,13 @@ body {
 
 .rs-content {
   .clearfix;
-  padding: @padding-base-vertical*4 @padding-base-horizontal*2;
+  padding: 0 @padding-base-horizontal*2 @padding-base-vertical*4 ;
 
+}
+
+.rs-control-bar {
+  .row;
+  margin-bottom:@padding-base-vertical*4;
 }
 
 .rs-back-link {

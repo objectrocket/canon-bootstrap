@@ -73,7 +73,7 @@ template: detail.html
     <div class="rs-main rs-panel">
 
       <!-- Breadcrumb section -->
-      <ol class="breadcrumb">
+      <ol class="breadcrumb hidden">
         <li class="pull-right" style="position:relative;">
           <span data-toggle="dropdown">
             <i class="fa fa-gear"></i>
@@ -127,8 +127,8 @@ template: detail.html
 
       <header>
         <!-- Hidden Example button group on heading -->
-        <div class="btn-group pull-right hidden">
-          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-gear"></i> Action <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">
@@ -227,9 +227,32 @@ template: detail.html
       </header>
       <section class="rs-content">
 
+        <!-- RS-CONTROL-BAR -->
+        <div class="rs-control-bar">
+          <div class="col-sm-8">
+            <button class="btn btn-primary">Add New</button>
+            <button class="btn btn-default disabled">Delete Selected</button>
+          </div>
+
+          <div class="col-sm-4 pull-right text-right">
+
+            <div class="input-group add-on">
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
         <table class="table table-bordered">
             <thead>
               <tr>
+              <th class="rs-table-checkbox"><input type="checkbox" class="select-all"></th>
                 <th>Name</th>
                 <th>IPv4</th>
                 <th>IPv6</th>
@@ -237,17 +260,37 @@ template: detail.html
             </thead>
             <tbody>
               <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
                 <td class="rs-table-text">PublicNet <span class="rs-quiet">(Internet)</span></td>
                 <td class="rs-table-text">101.122.11.222</td>
                 <td class="rs-table-text"><span class="rs-quiet">None</span></td>
               </tr>
               <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
                 <td class="rs-table-text">ServiceNet <span class="rs-quiet">(Rackspace DFW)</span></td>
                 <td class="rs-table-text">10.111.22.112</td>
                 <td class="rs-table-text"><span class="rs-quiet">None</span></td>
               </tr>
             </tbody>
           </table>
+
+          <nav>
+            <ul class="pager">
+              <li class="previous"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+              <li>
+                <ul class="pagination">
+
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
+              </li>
+              <li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </nav>
+
 
       </section>
 
@@ -291,7 +334,7 @@ template: detail.html
 
   <div class="col-md-3">
 
-  <div class="well">
+
       <h3>Managing Your Server</h3>
       <h4>Log into your server now</h4>
       <p>For Linux, use the command below to log in via SSH. Open a terminal application and run:</p>
@@ -324,10 +367,9 @@ template: detail.html
       <p><a target="blank" href="https://cloudtools.rackspace.com/home">Visit the Cloud Tools Marketplace »</a></p>
     </div>
 
+
+
   </div>
-
-
-</div>
 
 </div>
 

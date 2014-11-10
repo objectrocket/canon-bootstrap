@@ -192,29 +192,32 @@ template: demo.html
   <div class="col-md-9">
 
     <div class="rs-main rs-panel">
-      <h2 class="page-header">Cloud Servers</h2>
-      <div class="rs-content">
+      <header>
+        <h1>Cloud Servers</h1>
+      </header>
+      <section class="rs-content">
 
-        <div class="clearfix">
-          <a href="create.html" class="btn btn-primary">Create Server</a>
-          <button class="btn btn-default btn-disabled modify-selected" disabled="">Delete</button>
-
-          <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-gear"></i> Action <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="presentation" class="dropdown-header">Manage</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="presentation" class="dropdown-header">Monitor</li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+        <div class="rs-control-bar">
+          <div class="col-sm-8">
+            <button class="btn btn-primary">Crete Server</button>
+            <button class="btn btn-default disabled">Delete Selected</button>
           </div>
+
+          <div class="col-sm-4 pull-right text-right">
+
+            <div class="input-group add-on">
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+
 
         <table class="table table-striped">
           <thead>
@@ -315,7 +318,7 @@ template: demo.html
         </tbody>
       </table>
 
-    </div>
+    </section>
 
   </div>
 

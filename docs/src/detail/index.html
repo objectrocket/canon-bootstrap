@@ -4,18 +4,16 @@ description: Canon Servers
 template: detail.html
 ---
 
-<div class="navbar navbar-primary navbar-static-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-primary">
+  <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#rs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <i class="fa fa-bars fa-2x"></i>
       </button>
-      <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; width:164px;"></a>
+      <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; min-width:164px;"></a>
     </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="rs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Servers</a></li>
@@ -40,9 +38,9 @@ template: detail.html
 
     </div>
   </div>
-</div>
+</nav>
 
-<div class="navbar navbar-secondary navbar-static-top">
+<nav class="navbar navbar-secondary navbar-collapse collapse" collapse="isCollapsed">
   <div class="container-fluid">
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 
@@ -62,8 +60,7 @@ template: detail.html
       </ul>
     </div>
   </div>
-</div>
-
+</nav>
 
 
 <div class="row">
@@ -71,11 +68,39 @@ template: detail.html
   <div class="col-md-9">
 
     <div class="rs-main rs-panel">
-      <section>
+
+      <!-- Breadcrumb section -->
+      <ol class="breadcrumb hidden">
+        <li class="pull-right" style="position:relative;">
+          <span data-toggle="dropdown">
+            <i class="fa fa-gear"></i>
+            Actions
+            <i class="caret"></i>
+          </span>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation" class="dropdown-header">Manage</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="presentation" class="dropdown-header">Monitor</li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Cloud Servers</a></li>
+        <li class="active">My Cloud Server</li>
+      </ol>
+
+
+
+      <!-- Hidden main page header section directly from canon -->
+      <section class="hidden">
 
         <div class="page-header">
           <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-gear"></i> Action <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
@@ -90,99 +115,141 @@ template: detail.html
             </ul>
           </div>
 
-          <h2>My Cloud Server</h2>
+          <h2>My Cloud Server <small>Cloud Server</small></h2>
         </div>
 
       </section>
 
-      <header>
-        <h3>Server Details</h3>
-      </header>
-      <section class="rs-content">
 
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Server Status</label>
-            <div class="col-sm-10">
-              <p class="form-control-static">
-                <span class="label label-success">Active</span>
-              </p>
-            </div>
+      <div class="panel panel-section">
+        <div class="panel-heading">
+          <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-gear"></i> Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation" class="dropdown-header">Manage</li>
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="presentation" class="dropdown-header">Monitor</li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
           </div>
 
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">ID</label>
-            <div class="col-sm-10">
-              <p class="form-control-static">
-                86753098675309
-              </p>
+          <h1 class="panel-title">My Cloud Server</h1>
+        </div>
+        <div class="panel-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Server Status</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">
+                  <span class="label label-success">Active</span>
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">System Image</label>
-            <div class="col-sm-10">
-              <p class="form-control-static">
-                Ubuntu 10.04 LTS  •  Rebuild…
-              </p>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">ID</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">
+                  86753098675309
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">RAM</label>
-            <div class="col-sm-4">
-              <div class="form-control-static">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                  60%
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">System Image</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">
+                  Ubuntu 10.04 LTS  •  Rebuild…
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">RAM</label>
+              <div class="col-sm-4">
+                <div class="form-control-static">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                      60%
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <p class="form-control-static">
+              <div class="col-sm-6">
+                <p class="form-control-static">
                   912.23 MB of 2 GB
-              </p>
+                </p>
+              </div>
             </div>
+
+
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Disk</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">
+                  100 GB
+                  <i class="fa fa-pencil"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Disk Partition</label>
+              <div class="col-sm-10">
+                <p class="form-control-static">
+                  100 GB
+                  <i class="fa fa-question-circle"></i>
+                </p>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+
+
+
+      <div class="panel panel-section">
+        <div class="panel-heading">
+          <i class="fa fa-chevron-down pull-right"></i>
+          <h3 class="panel-title">Networks</h3>
+        </div>
+        <div class="panel-body">
+
+          <!-- RS-CONTROL-BAR -->
+          <div class="rs-control-bar">
+
+            <div class="col-sm-8">
+              <button class="btn btn-primary">Add New</button>
+              <button class="btn btn-default disabled">Delete Selected</button>
+            </div>
+
+            <div class="col-sm-4 pull-right text-right">
+
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                  <button class="btn btn-input" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
-
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Disk</label>
-            <div class="col-sm-10">
-              <p class="form-control-static">
-                100 GB
-                <i class="fa fa-pencil"></i>
-              </p>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Disk Partition</label>
-            <div class="col-sm-10">
-              <p class="form-control-static">
-                100 GB
-                <i class="fa fa-question-circle"></i>
-              </p>
-            </div>
-          </div>
-
-
-        </form>
-
-
-      </section>
-
-
-      <header>
-        <i class="fa fa-chevron-down pull-right"></i>
-        <h3>Networks</h3>
-      </header>
-      <section class="rs-content">
-
-        <table class="table table-bordered">
+          <table class="table table-bordered">
             <thead>
               <tr>
+                <th class="rs-table-checkbox"><input type="checkbox" class="select-all"></th>
                 <th>Name</th>
                 <th>IPv4</th>
                 <th>IPv6</th>
@@ -190,11 +257,13 @@ template: detail.html
             </thead>
             <tbody>
               <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
                 <td class="rs-table-text">PublicNet <span class="rs-quiet">(Internet)</span></td>
                 <td class="rs-table-text">101.122.11.222</td>
                 <td class="rs-table-text"><span class="rs-quiet">None</span></td>
               </tr>
               <tr>
+                <td class="rs-table-checkbox"><input type="checkbox"></td>
                 <td class="rs-table-text">ServiceNet <span class="rs-quiet">(Rackspace DFW)</span></td>
                 <td class="rs-table-text">10.111.22.112</td>
                 <td class="rs-table-text"><span class="rs-quiet">None</span></td>
@@ -202,7 +271,85 @@ template: detail.html
             </tbody>
           </table>
 
-      </section>
+          <nav>
+            <ul class="pager">
+              <li class="previous"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+              <li>
+                <ul class="pagination">
+
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
+              </li>
+              <li class="next"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="panel panel-section">
+        <div class="panel-heading">
+          <h3 class="panel-title">Tabs</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+            <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+            <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+            <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane panel-body" id="home">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates omnis iure sequi quia dignissimos cumque sint esse alias odit numquam, inventore tenetur fugiat beatae ex culpa impedit ad saepe velit!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">...</div>
+            <div role="tabpanel" class="tab-pane" id="messages">...</div>
+            <div role="tabpanel" class="tab-pane" id="settings">...</div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="alert alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <strong>Success:</strong> you did something good
+      </div>
+
+      <div class="alert alert-info" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <strong>Success:</strong> you did something good
+      </div>
+
+      <div class="alert alert-warning" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <strong>Success:</strong> you did something good
+      </div>
+
+      <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <strong>Success:</strong> you did something good
+      </div>
 
     </div>
 
@@ -210,7 +357,7 @@ template: detail.html
 
   <div class="col-md-3">
 
-  <div class="well">
+
       <h3>Managing Your Server</h3>
       <h4>Log into your server now</h4>
       <p>For Linux, use the command below to log in via SSH. Open a terminal application and run:</p>
@@ -243,10 +390,9 @@ template: detail.html
       <p><a target="blank" href="https://cloudtools.rackspace.com/home">Visit the Cloud Tools Marketplace »</a></p>
     </div>
 
+
+
   </div>
-
-
-</div>
 
 </div>
 

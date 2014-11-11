@@ -4,18 +4,16 @@ description: Canon Servers
 template: demo.html
 ---
 
-<div class="navbar navbar-primary navbar-static-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-primary">
+  <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#rs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <i class="fa fa-bars fa-2x"></i>
       </button>
-      <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; width:164px;"></a>
+      <a href="/" class="navbar-brand" style="background:url('../../assets/logo.png') center center no-repeat; min-width:164px;"></a>
     </div>
-    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="rs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Servers</a></li>
@@ -40,9 +38,9 @@ template: demo.html
 
     </div>
   </div>
-</div>
+</nav>
 
-<div class="navbar navbar-secondary navbar-static-top">
+<nav class="navbar navbar-secondary navbar-collapse collapse" collapse="isCollapsed">
   <div class="container-fluid">
     <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
 
@@ -62,7 +60,7 @@ template: demo.html
       </ul>
     </div>
   </div>
-</div>
+</nav>
 
 
 
@@ -192,29 +190,35 @@ template: demo.html
   <div class="col-md-9">
 
     <div class="rs-main rs-panel">
-      <h2 class="page-header">Cloud Servers</h2>
-      <div class="rs-content">
 
-        <div class="clearfix">
-          <a href="create.html" class="btn btn-primary">Create Server</a>
-          <button class="btn btn-default btn-disabled modify-selected" disabled="">Delete</button>
-
-          <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-gear"></i> Action <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="presentation" class="dropdown-header">Manage</li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="presentation" class="dropdown-header">Monitor</li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
+      <div class="panel panel-section">
+          <div class="panel-heading">
+            <h1 class="panel-title">Cloud Servers</h1>
           </div>
+          <div class="panel-body">
+
+
+        <div class="rs-control-bar">
+          <div class="col-sm-8">
+            <button class="btn btn-primary">Crete Server</button>
+            <button class="btn btn-default disabled">Delete Selected</button>
+          </div>
+
+          <div class="col-sm-4 pull-right text-right">
+
+            <div class="input-group add-on">
+              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+              <div class="input-group-btn">
+                <button class="btn btn-input" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+
 
         <table class="table table-striped">
           <thead>
@@ -315,7 +319,10 @@ template: demo.html
         </tbody>
       </table>
 
-    </div>
+
+          </div>
+      </div>
+
 
   </div>
 

@@ -38,7 +38,7 @@ gulp.task('build:less-min', function(){
       .on('error', error)
     .pipe(minifyCSS())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('build:less', function () {
@@ -51,24 +51,24 @@ gulp.task('build:less', function () {
       ] }))
       .on('error', error)
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('build:fonts', function (done) {
   async.series({
     canon: function (done) {
       gulp.src('fonts/**/*')
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('build/fonts'))
         .on('end', done);
     },
     bootstrap: function (done) {
       gulp.src('node_modules/bootstrap/fonts/**/*')
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('build/fonts'))
         .on('end', done);
     },
     fontawesome:function(done){
       gulp.src('node_modules/font-awesome/fonts/**/*')
-      .pipe(gulp.dest('build'))
+      .pipe(gulp.dest('build/fonts'))
       .on('end',done);
     }
 

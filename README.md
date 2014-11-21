@@ -40,7 +40,7 @@ commands:
 $ git clone https://github.com/rackerlabs/canon-bootstrap
 $ cd canon-bootstrap
 $ npm install
-$ npm run server
+$ npm start
 ```
 
 Visit `http://0.0.0.0:8000` to see documentation and a live demo of 

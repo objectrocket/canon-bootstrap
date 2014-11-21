@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "server": "gulp server",
+    "start": "gulp server",
     "doc": "gulp doc"
   },
   "devDependencies": {

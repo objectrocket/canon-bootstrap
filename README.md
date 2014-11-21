@@ -1,5 +1,7 @@
 # canon-bootstrap
 
+[![Build Status](http://img.shields.io/travis/rackerlabs/canon-bootstrap/master.svg)](https://travis-ci.org/rackerlabs/canon-bootstrap)
+
 **Nothing to see here. Move along.**
 
 Canon Bootstrap is a set of themes for Twitter Bootstrap based on the Canon 

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "homepage": "https://github.com/rackerlabs/canon-bootstrap",
-  "description": "Canon Skins for Twitter Bootstrap",
+  "description": "Canon Bootstrap is a theme for Twitter Bootstrap based on Canon's visual design.",
   "author": "Brad Gignac <bgignac@bradgignac.com>",
   "keywords": [
     "bootstrap",

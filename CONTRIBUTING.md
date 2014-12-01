@@ -14,7 +14,7 @@ chat with us in `#canon-dev` on `irc.freenode.net`.
 ## Found an Issue?
 
 If you find a bug or issue with the documentation, please help us by submitting
-an [issue](https://github.com/rackerlabs/canon-bootstrap). Detailed bug reports
+an [issue](https://github.com/rackerlabs/canon-bootstrap/issues). Detailed bug reports
 are the best way to help us troubleshoot and fix your issue, so please include
 the following information in your issue:
 
@@ -30,10 +30,10 @@ for more information on submitting a pull request.
 
 ## Want a Feature?
 
-Please request features by submitting an [issue](https://github.com/rackerlabs/canon-bootstrap).
+Please request features by submitting an [issue](https://github.com/rackerlabs/canon-bootstrap/issues).
 When submitting a feature request, please provide as much context and detail as
-possible. And don't forget: **pull requests are always welcome.** See 
-[Submit a Pull Request](#submit-a-pull-request) for more information on 
+possible. And don't forget: **pull requests are always welcome.** See
+[Submit a Pull Request](#submit-a-pull-request) for more information on
 how to submitting a pull request.
 
 ## Submit a Pull Request
@@ -41,7 +41,7 @@ how to submitting a pull request.
 We appreciate all the help we can get, and pull requests are the best way to
 help. However, **please ask** before beginning work on any major pull request.
 Otherwise, you risk spending a lot of time and effort working on something that
-may not be merged. Additionally, your pull request should adhere to the 
+may not be merged. Additionally, your pull request should adhere to the
 following coding standards used throughout the project:
 
 - Code should adhere to Bootstrap's [Code Guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#code-guidelines).

@@ -26,19 +26,19 @@
 
   .navbar-form,
   .navbar-btn {
-    margin-top: (@height - @input-height-base) / 2;
-    margin-bottom: (@height - @input-height-base) / 2;
+    margin-top: floor((@height - @input-height-base) / 2);
+    margin-bottom: floor((@height - @input-height-base) / 2);
   }
 
   .navbar-btn {
     &.btn-sm {
-      margin-top: (@height - 30) / 2;
-      margin-bottom: (@height - 30) / 2;
+      margin-top: floor((@height - 30) / 2);
+      margin-bottom: floor((@height - 30) / 2);
     }
 
     &.btn-xs {
-      margin-top: (@height - 22) / 2;
-      margin-bottom: (@height - 22) / 2;
+      margin-top: floor((@height - 22) / 2);
+      margin-bottom: floor((@height - 22) / 2);
     }
   }
 

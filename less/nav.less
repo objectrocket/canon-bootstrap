@@ -3,7 +3,6 @@
   .seam();
 
   min-height: @navbar-height;
-  margin: 0;
 
   .navbar-text {
     color: @navbar-primary-default-color;
@@ -70,17 +69,6 @@
   z-index:999;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.navbar + .navbar {
+  margin-top: -@navbar-margin-bottom;
+}

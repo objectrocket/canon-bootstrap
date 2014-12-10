@@ -8,3 +8,7 @@
 - FIX: Typography - bump line height to 20px
 - FIX: variables.less - revert state color variables
 - Add Source Sans Pro Regular font files to build folder
+
+## v0.2.1 (December 10, 2014)
+
+- FIX: variables.less - darken text input color

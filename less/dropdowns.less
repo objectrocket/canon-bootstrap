@@ -1,0 +1,30 @@
+.dropdown-inverse.dropdown-menu {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+
+  & > li > a {
+    color: #ccc;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    .font-smoothing;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  & > .divider {
+    background-color: #000;
+    border-bottom: 1px solid #434343;
+    height: 2px;
+    margin: 5px 0;
+  }
+
+  .navbar-utility .navbar-nav > li > & {
+    border-radius: 3px;
+    margin-top: 1px;
+  }
+}

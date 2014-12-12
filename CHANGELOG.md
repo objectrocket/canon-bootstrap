@@ -12,3 +12,12 @@
 ## v0.2.1 (December 10, 2014)
 
 - FIX: variables.less - darken text input color
+
+## v0.3.0 (December 12, 2014)
+
+- FIX: form-group - add original margins
+- Add form-group-static - supports detail pages
+- Add navbar-utility dropdown styles
+- Add canon styled tooltips
+- Add navbar-secondary
+

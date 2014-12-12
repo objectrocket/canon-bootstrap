@@ -4173,6 +4173,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default,
 .navbar-primary,
+.navbar-secondary,
 .navbar-utility,
 .navbar-footer {
   background-color: transparent;
@@ -4180,6 +4181,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand,
 .navbar-primary .navbar-brand,
+.navbar-secondary .navbar-brand,
 .navbar-utility .navbar-brand,
 .navbar-footer .navbar-brand {
   color: #888888;
@@ -4188,6 +4190,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-brand:focus,
 .navbar-primary .navbar-brand:hover,
 .navbar-primary .navbar-brand:focus,
+.navbar-secondary .navbar-brand:hover,
+.navbar-secondary .navbar-brand:focus,
 .navbar-utility .navbar-brand:hover,
 .navbar-utility .navbar-brand:focus,
 .navbar-footer .navbar-brand:hover,
@@ -4197,12 +4201,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-text,
 .navbar-primary .navbar-text,
+.navbar-secondary .navbar-text,
 .navbar-utility .navbar-text,
 .navbar-footer .navbar-text {
   color: #888888;
 }
 .navbar-default .navbar-nav > li > a,
 .navbar-primary .navbar-nav > li > a,
+.navbar-secondary .navbar-nav > li > a,
 .navbar-utility .navbar-nav > li > a,
 .navbar-footer .navbar-nav > li > a {
   color: #888888;
@@ -4211,6 +4217,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-primary .navbar-nav > li > a:hover,
 .navbar-primary .navbar-nav > li > a:focus,
+.navbar-secondary .navbar-nav > li > a:hover,
+.navbar-secondary .navbar-nav > li > a:focus,
 .navbar-utility .navbar-nav > li > a:hover,
 .navbar-utility .navbar-nav > li > a:focus,
 .navbar-footer .navbar-nav > li > a:hover,
@@ -4224,6 +4232,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-primary .navbar-nav > .active > a,
 .navbar-primary .navbar-nav > .active > a:hover,
 .navbar-primary .navbar-nav > .active > a:focus,
+.navbar-secondary .navbar-nav > .active > a,
+.navbar-secondary .navbar-nav > .active > a:hover,
+.navbar-secondary .navbar-nav > .active > a:focus,
 .navbar-utility .navbar-nav > .active > a,
 .navbar-utility .navbar-nav > .active > a:hover,
 .navbar-utility .navbar-nav > .active > a:focus,
@@ -4239,6 +4250,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-primary .navbar-nav > .disabled > a,
 .navbar-primary .navbar-nav > .disabled > a:hover,
 .navbar-primary .navbar-nav > .disabled > a:focus,
+.navbar-secondary .navbar-nav > .disabled > a,
+.navbar-secondary .navbar-nav > .disabled > a:hover,
+.navbar-secondary .navbar-nav > .disabled > a:focus,
 .navbar-utility .navbar-nav > .disabled > a,
 .navbar-utility .navbar-nav > .disabled > a:hover,
 .navbar-utility .navbar-nav > .disabled > a:focus,
@@ -4250,6 +4264,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle,
 .navbar-primary .navbar-toggle,
+.navbar-secondary .navbar-toggle,
 .navbar-utility .navbar-toggle,
 .navbar-footer .navbar-toggle {
   border-color: #aaaaaa;
@@ -4258,6 +4273,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-toggle:focus,
 .navbar-primary .navbar-toggle:hover,
 .navbar-primary .navbar-toggle:focus,
+.navbar-secondary .navbar-toggle:hover,
+.navbar-secondary .navbar-toggle:focus,
 .navbar-utility .navbar-toggle:hover,
 .navbar-utility .navbar-toggle:focus,
 .navbar-footer .navbar-toggle:hover,
@@ -4266,6 +4283,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-toggle .icon-bar,
 .navbar-primary .navbar-toggle .icon-bar,
+.navbar-secondary .navbar-toggle .icon-bar,
 .navbar-utility .navbar-toggle .icon-bar,
 .navbar-footer .navbar-toggle .icon-bar {
   background-color: #666666;
@@ -4274,6 +4292,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-form,
 .navbar-primary .navbar-collapse,
 .navbar-primary .navbar-form,
+.navbar-secondary .navbar-collapse,
+.navbar-secondary .navbar-form,
 .navbar-utility .navbar-collapse,
 .navbar-utility .navbar-form,
 .navbar-footer .navbar-collapse,
@@ -4286,6 +4306,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-primary .navbar-nav > .open > a,
 .navbar-primary .navbar-nav > .open > a:hover,
 .navbar-primary .navbar-nav > .open > a:focus,
+.navbar-secondary .navbar-nav > .open > a,
+.navbar-secondary .navbar-nav > .open > a:hover,
+.navbar-secondary .navbar-nav > .open > a:focus,
 .navbar-utility .navbar-nav > .open > a,
 .navbar-utility .navbar-nav > .open > a:hover,
 .navbar-utility .navbar-nav > .open > a:focus,
@@ -4298,6 +4321,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a,
   .navbar-primary .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > li > a,
   .navbar-utility .navbar-nav .open .dropdown-menu > li > a,
   .navbar-footer .navbar-nav .open .dropdown-menu > li > a {
     color: #888888;
@@ -4306,6 +4330,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar-primary .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-primary .navbar-nav .open .dropdown-menu > li > a:focus,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar-utility .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-utility .navbar-nav .open .dropdown-menu > li > a:focus,
   .navbar-footer .navbar-nav .open .dropdown-menu > li > a:hover,
@@ -4319,6 +4345,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-primary .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-primary .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-primary .navbar-nav .open .dropdown-menu > .active > a:focus,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .active > a:focus,
   .navbar-utility .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-utility .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-utility .navbar-nav .open .dropdown-menu > .active > a:focus,
@@ -4334,6 +4363,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-primary .navbar-nav .open .dropdown-menu > .disabled > a:focus,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-secondary .navbar-nav .open .dropdown-menu > .disabled > a:focus,
   .navbar-utility .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-utility .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-utility .navbar-nav .open .dropdown-menu > .disabled > a:focus,
@@ -4346,18 +4378,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-link,
 .navbar-primary .navbar-link,
+.navbar-secondary .navbar-link,
 .navbar-utility .navbar-link,
 .navbar-footer .navbar-link {
   color: #888888;
 }
 .navbar-default .navbar-link:hover,
 .navbar-primary .navbar-link:hover,
+.navbar-secondary .navbar-link:hover,
 .navbar-utility .navbar-link:hover,
 .navbar-footer .navbar-link:hover {
   color: #333333;
 }
 .navbar-default .btn-link,
 .navbar-primary .btn-link,
+.navbar-secondary .btn-link,
 .navbar-utility .btn-link,
 .navbar-footer .btn-link {
   color: #888888;
@@ -4366,6 +4401,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .btn-link:focus,
 .navbar-primary .btn-link:hover,
 .navbar-primary .btn-link:focus,
+.navbar-secondary .btn-link:hover,
+.navbar-secondary .btn-link:focus,
 .navbar-utility .btn-link:hover,
 .navbar-utility .btn-link:focus,
 .navbar-footer .btn-link:hover,
@@ -4380,6 +4417,10 @@ fieldset[disabled] .navbar-default .btn-link:focus,
 fieldset[disabled] .navbar-primary .btn-link:hover,
 .navbar-primary .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-primary .btn-link:focus,
+.navbar-secondary .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-secondary .btn-link:hover,
+.navbar-secondary .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-secondary .btn-link:focus,
 .navbar-utility .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-utility .btn-link:hover,
 .navbar-utility .btn-link[disabled]:focus,
@@ -5723,8 +5764,8 @@ button.close {
   filter: alpha(opacity=0);
 }
 .tooltip.in {
-  opacity: 0.9;
-  filter: alpha(opacity=90);
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .tooltip.top {
   margin-top: -3px;
@@ -8134,6 +8175,7 @@ button.close {
 }
 .navbar-default,
 .navbar-primary,
+.navbar-secondary,
 .navbar-utility,
 .navbar-footer {
   border-width: 0 0 1px;
@@ -8143,6 +8185,9 @@ button.close {
   border-width: 0;
   box-shadow: none;
 }
+/* HACK: Source Sans Pro doesn't render centered inside the line height so
+ * we apply custom padding values to make it appear visually centered with
+ * text using a different font. */
 .navbar-primary {
   min-height: 70px;
 }
@@ -8183,14 +8228,58 @@ button.close {
   margin-bottom: 25px;
 }
 .navbar-primary .navbar-nav > li > a {
-  /* HACK: Source Sans Pro doesn't render centered inside the line height so
-     * we apply custom padding values to make it appear visually centered with
-     * text using a different font. */
   padding-top: 27px;
   padding-bottom: 23px;
   font-family: 'Source Sans Pro';
   font-size: 18px;
   font-weight: 400;
+  text-shadow: 0 1px #fff;
+}
+.navbar-secondary {
+  min-height: 35px;
+}
+.navbar-secondary .navbar-brand {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  height: 35px;
+}
+.navbar-secondary .navbar-nav {
+  margin-top: 3.75px;
+  margin-bottom: 3.75px;
+}
+@media (min-width: 768px) {
+  .navbar-secondary .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .navbar-secondary .navbar-nav > li > a {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+}
+.navbar-secondary .navbar-form,
+.navbar-secondary .navbar-btn {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.navbar-secondary .navbar-btn.btn-sm {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.navbar-secondary .navbar-btn.btn-xs {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.navbar-secondary .navbar-text {
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+}
+.navbar-secondary .navbar-nav > li > a {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  font-family: 'Source Sans Pro';
+  font-size: 14px;
+  font-weight: 600;
   text-shadow: 0 1px #fff;
 }
 .navbar-utility {
@@ -8275,6 +8364,33 @@ button.close {
 .navbar-footer .navbar-text {
   margin-top: 7.5px;
   margin-bottom: 7.5px;
+}
+.dropdown-inverse.dropdown-menu {
+  background-color: #333;
+  border: none;
+  border-radius: 3px;
+}
+.dropdown-inverse.dropdown-menu > li > a {
+  color: #ccc;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.dropdown-inverse.dropdown-menu > li > a:hover {
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-inverse.dropdown-menu > .divider {
+  background-color: #000;
+  border-bottom: 1px solid #434343;
+  height: 2px;
+  margin: 5px 0;
+}
+.navbar-utility .navbar-nav > li > .dropdown-inverse.dropdown-menu {
+  border-radius: 3px;
+  margin-top: 1px;
 }
 .btn-default,
 .btn-primary,
@@ -8713,10 +8829,13 @@ height:auto .rs-table-status-ok.rs-table-status-striped {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.form-group {
-  margin-bottom: 0px;
-}
 .form-group .progress {
+  margin-bottom: 0;
+}
+.form-group-static {
+  margin-bottom: 10px;
+}
+.form-horizontal-static .form-group {
   margin-bottom: 0;
 }
 nav .pager .pagination {
@@ -8776,6 +8895,18 @@ nav .pagination {
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: pointer;
+}
+.tooltip-inner {
+  background-color: #F5F5F5;
+  border: 1px solid #BBB;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 4px 1px;
+  color: #333;
+  padding: 8px;
+  text-align: left;
+}
+.tooltip-arrow {
+  display: none;
 }
 
 /*# sourceMappingURL=canon-bootstrap.css.map */

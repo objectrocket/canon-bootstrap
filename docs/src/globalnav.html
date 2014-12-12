@@ -15,8 +15,20 @@ template: layout.html
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Feedback</a></li>
         <li><a href="#">Support</a></li>
-        <li>
-          <a class="dropdown-toggle" href="#">Account: rackspacecanon <span class="caret"></span></a>
+        <li dropdown>
+          <a href class="dropdown-toggle">
+            Account: foobar <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu inverse-dropdown dropdown-menu-right" role="menu">
+            <li>
+              <a href="/sso-reach" target="_blank">
+                Cloud Control Panel <i class="fa fa-external-link"></i>
+              </a>
+            </li>
+            <li>
+              <a id="logout-link" class="top-nav-link top-nav-logout" ng-href="/saml/logout?next={{next}}" target="_self">Log Out</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
